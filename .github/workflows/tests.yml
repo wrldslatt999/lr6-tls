@@ -1,0 +1,23 @@
+name: TLS client-server security tests
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  unittest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    strategy:
+      matrix:
+        python-version: ['3.11', '3.12', '3.13']
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Verify source syntax
+        run: python -m compileall -q security.py eventlog.py server.py client.py analyze_logs.py tools
+      - name: TLS / authentication / integrity integration tests
+        run: python -m unittest discover -s tests -v

@@ -1,0 +1,13 @@
+{
+  "environment": "local Linux validation container (NOT Kali VM)",
+  "observed_utc": "2026-11-27T12:43:28+00:00",
+  "tls_protocol": "TLSv1.3",
+  "tls_cipher": "TLS_AES_256_GCM_SHA384",
+  "certificate_fingerprint_sha256": "7e4ee418321959490a7204ec015a19a2af74442667ab9a3ad1b648c045ea90d0",
+  "valid_message_bytes": 30,
+  "valid_message_receipt_verified": true,
+  "bad_hmac_rejected_as": "bad_hmac",
+  "wrong_password_rejected_as": "invalid_credentials",
+  "server_logged_events": 13,
+  "certificates_generated_with_openssl": true
+}

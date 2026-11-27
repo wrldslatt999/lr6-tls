@@ -1,0 +1,23 @@
+{
+  "events_analyzed": 10,
+  "malformed_lines": 0,
+  "by_event": {
+    "tls.connected": 2,
+    "auth.succeeded": 2,
+    "data.accepted": 1,
+    "session.logout": 2,
+    "conn.closed": 2,
+    "data.integrity_failed": 1
+  },
+  "by_user": {
+    "alice": 6
+  },
+  "suspicious": [
+    {
+      "peer": "127.0.0.1",
+      "event": "data.integrity_failed",
+      "count": 1
+    }
+  ],
+  "auth_failure_bursts_ge3": []
+}

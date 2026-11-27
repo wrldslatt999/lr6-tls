@@ -1,0 +1,2 @@
+# Python 3.11+ standard library only: ssl, socketserver, hashlib.scrypt, hmac, json.
+# OpenSSL CLI is needed to generate certificates for local use and integration tests.
